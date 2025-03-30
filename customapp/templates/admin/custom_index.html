@@ -1,0 +1,18 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+
+<div class="dashboard-module">
+
+    <h1>Welcome, {{ request.user.first_name|default:request.user.username }}</h1>
+    <p>This is your custom admin dashboard. You can personalize this area with links, charts, stats, or messages.</p>
+
+
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="{% url 'admin:customapp_customer_changelist' %}"></a></li>
+        <!-- Add more links here -->
+    </ul>
+</div>
+
+{% endblock %}
